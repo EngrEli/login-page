@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+html{
+  height:100vh;
+}
+
+.cafe24-publisher{
+  display:flex;
+  height:auto;
+  width:700px;
+  border-radius: 4px;
+  margin:auto auto;
+  box-shadow: 0px 2px 6px -1px rgb(0 0 0 / 12%);
+  font-family: 'Montserrat', sans-serif;
+  margin-top:100px;
+  font-weight:300;
+}
+.cafe24-publisher form{
+  width: 500px;
+  padding: 40px 30px;
+  background: #fefefe;
+}
+.cafe24-publisher form .input-label .icon{
+  position:absolute;
+  top:50%;
+  left:-15px;
+  transform: translate(0,-50%);
+  height: 56px;
+  width: 44px;
+  font-size:25px;
+  color:#eee;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.cafe24-publisher form .input-label{
+  margin-bottom: 10px;
+  width: 100%;
+  position:relative;
+  margin-top:50px;
+}
+.cafe24-publisher form .input-label input{
+  font-size: 16px;
+  padding: 20px 0px;
+  height: 56px;
+  border: none;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+  color: #000;
+  outline:none;
+  font-weight: 400;
+  -webkit-appearance: none;
+  width:100%;
+}
+.cafe24-publisher form .input-label input::-webkit-input-placeholder { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight:300;
+  font-size:13px;
+}
+.cafe24-publisher .side-img{
+  width:200px;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6269da75-9f1e-433f-9595-a0ef15193331/de34ync-cba6ad91-763c-47b2-af8d-8dcbf0993491.jpg/v1/fill/w_1280,h_720,q_75,strp/minimalist_landscape_by_peruanofachero_de34ync-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNjI2OWRhNzUtOWYxZS00MzNmLTk1OTUtYTBlZjE1MTkzMzMxXC9kZTM0eW5jLWNiYTZhZDkxLTc2M2MtNDdiMi1hZjhkLThkY2JmMDk5MzQ5MS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.37FK0LznIVvbRqWEEdoUZ0F_3_6uiRpUJTGr9AEh7DU");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.cafe24-publisher button{
+  -webkit-appearance: none;
+    width: auto;
+    min-width: 100px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 15px 40px;
+    margin-top: 5px;
+    background-color: #07628B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0px 2px 6px -1px rgb(0 0 0 / 13%);
+    border: none;
+    float:right;
+    transition: all 300ms ease;
+    outline: 0;
+    border:1px solid #07628B;
+}
+.cafe24-publisher button:hover{
+  background-color:#fff;
+  color:#07628B;
+  cursor:pointer;
+  border-color:#07628B;
+}
+
+
+
+/* style for floating label */
+.cafe24-publisher .input-label label{
+  opacity:0;
+  position:absolute;
+  top:0;
+  left:0px;
+  font-size:12px;
+  top: calc(50% - 2);
+  transition: all 300ms ease;
+}
+/* if the user has typed something "style" */
+#username:valid ~ label,
+#password:valid ~ label{
+  opacity:0.8;
+  transform: translateY(-5px);
+}
+
+#username:valid,
+#password:valid{
+  border-bottom: solid 1px rgba(7, 98, 139, 1);
+}
+
+/* media Query */
+@media only screen and (max-width: 900px) {
+  .cafe24-publisher{
+    width:100%;
+    flex-direction:column;
+  }
+  .cafe24-publisher .side-img{
+    width:100%;
+    height:300px;
+  }
+  .cafe24-publisher form{
+    width:100%;
+    padding:40px 20px;
+  }
+  .cafe24-publisher button{
+    width:100%;
+  }
+  .cafe24-publisher form .input-label{
+    margin-top: 25px;
+  }
+  .modal .modal-content{
+    width:50%!important;
+    
+  }
+  .close{
+    top:15px!important;
+    right:5px!important;
+  }
+}
+
+.modal{
+  display:none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  
+  transition: 300ms ease-in all;
+}
+.modal .modal-content{
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight:300px;
+  
+  position:relative;
+}
+.close {
+  position: absolute;
+  top:50%;
+  right:15px;
+  transform:translate(0,-50%);
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.fa.fa-check-circle-o{
+  color: lightgreen;
+}
+.fa.fa-times-circle-o{
+  color: #F76F72;
+}
